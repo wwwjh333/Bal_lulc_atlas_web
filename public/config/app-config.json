@@ -1,0 +1,14 @@
+{
+  "map": {
+    "center": [-76.6122, 39.2904],
+    "zoom": 13
+  },
+  "layers": {
+    "naipUrl": "https://tiles.arcgis.com/tiles/ZwA0Q1mheCEc5yXS/arcgis/rest/services/bal_publish_map/MapServer",
+    "predictionUrl": "https://tiles.arcgis.com/tiles/ZwA0Q1mheCEc5yXS/arcgis/rest/services/bal_publish_pred_map/MapServer"
+  },
+  "prediction": {
+    "opacity": 0.55
+  }
+}
+

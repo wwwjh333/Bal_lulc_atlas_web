@@ -1,0 +1,10 @@
+{
+  "0": { "name": "Building", "color": "#ff0000" },
+  "1": { "name": "Impervious Surface", "color": "#858585" },
+  "2": { "name": "Tree Canopy", "color": "#228b22" },
+  "3": { "name": "Herbaceous Vegetation", "color": "#80ec68" },
+  "4": { "name": "Open Water", "color": "#0000ff" },
+  "5": { "name": "Bare Surface", "color": "#800000" },
+  "6": { "name": "Other / Unclassified", "color": "#ffffff" }
+}
+

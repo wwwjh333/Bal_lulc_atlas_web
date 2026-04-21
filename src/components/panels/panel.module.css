@@ -1,0 +1,130 @@
+.stack {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 10px;
+  border: 1px solid rgba(127, 127, 127, 0.2);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--background), var(--foreground) 1.5%);
+  transition: background 120ms ease, border-color 120ms ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle:hover {
+  background: color-mix(in srgb, var(--background), var(--foreground) 3%);
+  border-color: rgba(127, 127, 127, 0.28);
+}
+
+.toggleLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.toggleTitle {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+}
+
+.toggleHint {
+  font-size: 12px;
+  opacity: 0.72;
+  margin-top: 2px;
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+.sliderBlock {
+  padding: 10px 10px;
+  border: 1px solid rgba(127, 127, 127, 0.2);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--background), var(--foreground) 1.5%);
+}
+
+.sliderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sliderLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+}
+
+.sliderValue {
+  font-size: 12px;
+  opacity: 0.78;
+  font-variant-numeric: tabular-nums;
+}
+
+.slider {
+  width: 100%;
+  accent-color: #2563eb;
+}
+
+.legendList {
+  display: grid;
+  gap: 8px;
+}
+
+.legendItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 5px;
+  border: 1px solid rgba(127, 127, 127, 0.35);
+}
+
+.legendText {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  min-width: 0;
+}
+
+.legendId {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.legendName {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.muted {
+  font-size: 12px;
+  opacity: 0.78;
+  line-height: 1.4;
+}

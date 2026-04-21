@@ -38,11 +38,17 @@ export default function ArcGISMap(props: ArcGISMapProps) {
         const m = await loadArcGisModules();
         if (disposed) return;
 
+        const { setLocale } = await import("@arcgis/core/intl");
+        // 覆盖 <html lang="zh-CN">：否则 MapView 默认 UI（Zoom 等）会按中文拉取 t9n，易报 widget-intl:locale-error。
+        setLocale("en");
+
         // Use ArcGIS CDN assets to keep deployment artifact small and reduce build memory.
         // Must match the major/minor version your app targets.
-        m.EsriConfig.assetsPath = "https://js.arcgis.com/5.0/assets";
+        // 注意：必须是 @arcgis/core 对应版本的 assets 路径，否则会导致 widget t9n/worker 等资源 404。
+        m.EsriConfig.assetsPath = "https://js.arcgis.com/5.0.16/@arcgis/core/assets";
 
-        const map = new m.Map({ basemap: "topo-vector" });
+        // `topo-vector` 走 basemap styles 服务，在部分环境可能需要 API key/配额，改用 OSM 更稳。
+        const map = new m.Map({ basemap: "osm" });
 
         async function addLayer(opts: {
           url: string;
